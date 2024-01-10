@@ -1,0 +1,254 @@
+body{
+  width:100%;
+  font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+  margin-right:auto;
+  margin-left:auto;
+  padding-right:1em;
+  padding-left:1em;
+
+}
+.header{
+  background: #fff;
+  width: 100%;
+}
+.logo-text{
+  background-color: rgb(12, 236, 161);
+  padding:25px 25px;
+  text-decoration:none;
+  text-transform:uppercase;
+  color:white;
+  float:left;
+  font-size:25px;
+  font-weight:bold;
+  display: block;
+}
+.header__nav{
+  clear:left;
+  margin:0;
+}
+.header__nav ul{
+  margin:0;
+  padding:0;
+  
+}
+.header__nav li{
+  list-style-type:none;
+  border-bottom:1px dotted rgb(119, 119, 119);
+  text-align:center;
+  background-color:rgb(58, 57, 57);
+}
+.header__nav a{
+  text-decoration:none;
+  text-transform:uppercase;
+  color:rgb(128, 128, 128);
+  font-weight:600;
+  font-size:18px;
+  transition:.8s ease;
+  padding:25px 0;
+  display:block;
+}
+.header__nav a:hover{
+  color:rgb(12, 236, 161);
+}
+.section-buy{
+  background-image:url(../ProjetoInfusion/img/01.jpg);
+  background-size:cover;
+  height:80vh;
+  padding:80px 40px;
+  text-align:center;
+  
+}
+.section-buy h1{
+  background-color:rgb(12, 236, 161);
+  padding:25px 0;
+  font-size:25px;
+  text-transform:uppercase;
+  color:white;
+  margin:25vh 0 0;
+}
+.section-buy p{
+  background-color:rgb(58, 57, 57);
+  padding:20px 0;
+  font-size:20px;
+  color:white;
+  margin:5px 30px 60px;
+}
+.section-buy a{
+  background-color:rgba(58, 57, 57,.5);
+  padding:20px 40px;
+  border:2px solid rgb(151, 151, 151);
+  border-radius:10px;
+  text-decoration:none;
+  text-transform:uppercase;
+  color:rgb(221, 221, 221);
+}
+.section-buy a:hover{
+  border:2px solid rgb(12, 236, 161);
+  color:rgb(12, 236, 161);
+}
+.perfil-section{}
+.perfil-article{
+  outline:3px solid rgba(0, 0, 0,.4);
+  outline-offset: -3px;
+  margin-top:20px;
+}
+.perfil-img{
+  width:100%;
+}
+.perfil-foto{
+  width:88px;
+  height:88px;
+  margin:-55px auto;
+  overflow:hidden;
+}
+.perfil-conteudo{
+  padding:60px 20px 30px;
+  text-align:center;
+  font-size:20px;
+  color:rgb(155, 155, 155)
+}
+.perfil-article:hover{
+  outline: 3px solid rgb(12, 236, 161);
+  outline-offset: -3px;
+}
+.perfil-article:hover .perfil-foto img{
+  transform: translateY(-50%);
+  
+}
+.conteudo-principal{
+  color:rgb(146, 146, 146);
+}
+.btn{
+  padding:20px 40px;
+  text-transform:uppercase;
+  text-decoration:none;
+  font-weight:600;
+  display:inline-block;
+  margin-right:20px;
+}
+.btn__primario{
+  color:white;
+  background-color:rgb(12, 236, 161);
+}
+.btn__secundario{
+  color:white;
+  background-color:rgb(58, 57, 57);
+}
+.btn:hover{
+  background-color:rgb(151, 150, 150)
+}
+.ultimos-articles{}
+.ultimos-articles__titulo{
+  background-color:rgb(12, 236, 161);
+  padding:15px 0;
+  font-size:15px;
+  color:white;
+  text-transform:uppercase;
+}
+.ultimos-articles__img{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  grid-auto-rows:auto;
+  grid-gap:0;
+}
+.ultimos-articles__img img{
+  display:block;
+  width:100%;
+}
+.laptop-slider{
+  background-color:rgb(58, 57, 57);
+  padding:125px 0 100px;
+  overflow:auto;
+}
+.slideshow{
+  white-space: nowrap;
+
+}
+.slideshow figure{
+  display:inline-block;
+}
+.quote-container{}
+.quote-slideshow{
+  background-color:rgb(12, 236, 161);
+  padding:40px 0;
+  color:white;
+  font-size:15px;
+  border-bottom:5px solid rgb(12, 207, 142);
+}
+.no-js .quote-container figure + figure{
+  margin-top:5em;
+}
+.footer{
+  background-color:rgb(58, 57, 57);
+  padding:50px 0;
+  color:rgb(160, 160, 160);
+  font-size:15px;
+}
+.footer__logo{
+  text-transform:uppercase;
+}
+.footer__links{}
+.footer__links li{
+  list-style-type:none;
+}
+.footer__links a{
+  text-decoration:none;
+  color:rgb(160, 160, 160);
+  transition:.8s;
+}
+.footer__links a:hover{
+  color:rgb(12, 236, 161);
+}
+.header{
+  position:fixed;
+}
+.header__btnMenu{
+  display:none;
+}
+.logo-text{
+  box-sizing:border-box;
+  width:25%;
+}
+.header__nav{
+  clear:none;
+  float:left;
+  width:74%;
+}
+.header__nav ul{
+  display:flex;
+  justify-content:space-around;
+  
+}
+.header__nav li{
+  border-bottom:none;
+
+}
+.header__nav a{
+  background-color:white;
+  font-size:15px;
+}
+.perfil-section{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-gap:30px;
+}
+.content .container{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-gap:30px;
+}
+.ultimos-articles__img{
+  grid-template-columns:repeat(6,1fr)
+}
+.footer .container{
+  display:flex;
+  
+}
+.footer .container > *{
+  margin:1.5em;
+}
+}
+
+

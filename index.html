@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <title> Infusion </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <meta name="author" content="Daniel">
+        <meta name="description" content="descrição bacanuda">
+        <meta name="keywords" content="html5, tecnologia">
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <!-- Fonts -->
+        <link href='http://fonts.googleapis.com/css?family=Sintony:400,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+        
+      <link rel="stylesheet" href="../ProjetoInfusion/style/normalize.css">
+      
+    </head>
+
+    <style>
+      body{
+        width:100%;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      .container{
+        margin-right:auto;
+        margin-left:auto;
+        padding-right:1em;
+        padding-left:1em;
+        max-width:980px;
+
+      }
+      .header{
+        background: #fff;
+        width: 100%;
+      }
+      .js .header{
+        position:fixed;
+        width:100%;
+      }
+      
+      .logo-text{
+        background-color: rgb(12, 236, 161);
+        padding:25px 25px;
+        text-decoration:none;
+        text-transform:uppercase;
+        color:white;
+        float:left;
+        font-size:25px;
+        font-weight:bold;
+        display: block;
+        text-align:right;
+      }
+      .header__nav{
+        clear:left;
+        margin:0;
+      }
+      .header__nav ul{
+        margin:0;
+        padding:0;
+        
+      }
+      .header__nav li{
+        list-style-type:none;
+        border-bottom:1px dotted rgb(119, 119, 119);
+        text-align:center;
+        background-color:rgb(58, 57, 57);
+      }
+      .header__nav a{
+        text-decoration:none;
+        text-transform:uppercase;
+        color:rgb(128, 128, 128);
+        font-weight:600;
+        font-size:18px;
+        transition:.8s ease;
+        padding:25px 0;
+        display:block;
+      }
+      .header__nav a:hover{
+        color:rgb(12, 236, 161);
+      }
+      .js .header__nav{
+        transition:max-height 1s
+      }
+      .header__btnMenu{
+        float:right;
+        margin:1.5em;
+        background-color:transparent;
+        border:none;
+        font-size:14px;
+      }
+      .section-buy{
+        background-image:url(../ProjetoInfusion/img/01.jpg);
+        background-size:cover;
+        height:80vh;
+        padding:80px 40px;
+        text-align:center;
+        
+        
+      }
+      .section-buy h1{
+        background-color:rgb(12, 236, 161);
+        padding:25px 0;
+        font-size:25px;
+        text-transform:uppercase;
+        color:white;
+        margin:25vh 0 0;
+      }
+      .section-buy p{
+        background-color:rgb(58, 57, 57);
+        padding:20px 0;
+        font-size:20px;
+        color:white;
+        margin:5px 30px 60px;
+      }
+      .section-buy a{
+        background-color:rgba(58, 57, 57,.5);
+        padding:20px 40px;
+        border:2px solid rgb(151, 151, 151);
+        border-radius:10px;
+        text-decoration:none;
+        text-transform:uppercase;
+        color:rgb(221, 221, 221);
+        transition:.8s;
+      }
+      .section-buy a:hover{
+        border:2px solid rgb(12, 236, 161);
+        color:rgb(12, 236, 161);
+      }
+      .perfil-section{}
+      .perfil-article{
+        outline:1px solid rgba(143, 143, 143, 0.4);
+        outline-offset: -1px;
+        margin-top:20px;
+      }
+      .perfil-img{
+        width:100%;
+      }
+      .perfil-foto{
+        width:88px;
+        height:88px;
+        margin:-55px auto;
+        overflow:hidden;
+      }
+      .perfil-conteudo{
+        padding:60px 20px 30px;
+        text-align:center;
+        font-size:15px;
+        color:rgb(155, 155, 155);
+      }
+      .perfil-article:hover{
+        outline: 3px solid rgb(12, 236, 161);
+        outline-offset: -3px;
+      }
+      .perfil-article:hover .perfil-foto img{
+        transform: translateY(-50%);
+        
+      }
+      .conteudo-principal{
+        color:rgb(146, 146, 146);
+      }
+      .btn{
+        padding:20px 40px;
+        text-transform:uppercase;
+        text-decoration:none;
+        font-weight:600;
+        display:inline-block;
+        margin-right:20px;
+      }
+      .btn__primario{
+        color:white;
+        background-color:rgb(12, 236, 161);
+      }
+      .btn__secundario{
+        color:white;
+        background-color:rgb(58, 57, 57);
+      }
+      .btn:hover{
+        background-color:rgb(151, 150, 150)
+      }
+      .ultimos-articles{}
+      .ultimos-articles__titulo{
+        background-color:rgb(12, 236, 161);
+        padding:15px 0;
+        font-size:15px;
+        color:white;
+        text-transform:uppercase;
+      }
+      .ultimos-articles__img{
+        display:grid;
+        grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+        grid-auto-rows:auto;
+        grid-gap:0;
+      }
+      .ultimos-articles__img img{
+        display:block;
+        width:100%;
+      }
+      .laptop-slider{
+        background-color:rgb(58, 57, 57);
+        padding:125px 0 100px;
+        overflow:auto;
+      }
+      .slideshow{
+        white-space: nowrap;
+
+      }
+      .slideshow figure{
+        display:inline-block;
+      }
+      .quote-container{}
+      .quote-slideshow{
+        background-color:rgb(12, 236, 161);
+        padding:40px 0;
+        color:white;
+        font-size:15px;
+        border-bottom:5px solid rgb(12, 207, 142);
+      }
+      .no-js .quote-container figure + figure{
+        margin-top:5em;
+      }
+      .footer{
+        background-color:rgb(58, 57, 57);
+        padding:50px 0;
+        color:rgb(160, 160, 160);
+        font-size:15px;
+      }
+      .footer__logo{
+        text-transform:uppercase;
+      }
+      .footer__links{}
+      .footer__links li{
+        list-style-type:none;
+      }
+      .footer__links a{
+        text-decoration:none;
+        color:rgb(160, 160, 160);
+        transition:.8s;
+      }
+      .footer__links a:hover{
+        color:rgb(12, 236, 161);
+      }
+      @media screen and (min-width:1024px){
+      .header{
+        position:fixed;
+      }
+      .header__btnMenu{
+        display:none;
+      }
+      .logo-text{
+        box-sizing:border-box;
+        width:25%;
+      }
+      .header__nav{
+        clear:none;
+        float:left;
+        width:74%;
+      }
+      .header__nav ul{
+        display:flex;
+        justify-content:space-around;
+        
+      }
+      .header__nav li{
+        border-bottom:none;
+
+      }
+      .header__nav a{
+        background-color:white;
+        font-size:15px;
+      }
+      .perfil-section{
+        display:grid;
+        grid-template-columns:repeat(4,1fr);
+        grid-gap:30px;
+      }
+      .content .container{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        grid-gap:30px;
+      }
+      .ultimos-articles__img{
+        grid-template-columns:repeat(6,1fr)
+      }
+      .footer .container{
+        display:flex;
+        
+      }
+      .footer .container > *{
+        margin:1.5em;
+        }
+      }
+
+    </style>
+
+    <body class="no-js">
+        
+        <header class ="header">
+          <a href="index.html" class="logo-text">Infusion</a>
+          
+          <button style="display: none;" class="header__btnMenu"><i class="fas fa-bars fa-2x"></i><span class="sr-only">Menu</span></button>
+          
+          <nav class="header__nav">
+            <ul>
+              <li><a href="#">design folio</a></li>
+              <li><a href="#">services</a></li>
+              <li><a href="#">our business</a></li>
+              <li><a href="#">how we help</a></li>
+              <li><a href="#">take the tour</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+        
+        <section class="section-buy">        
+          <h1>
+            Cutting edge wp business theme
+          </h1>
+          <p>Gutful of bottlo no dramas he's got a massive hooroo.</p>
+          <a href="#">Buy it now</a>                
+        </section>
+
+        <div class="container"> 
+        <section class="perfil-section">
+
+          <article class="perfil-article">               
+
+            <img src="img/c01.jpg" alt="Carousel Img" class="perfil-img">
+            
+            <div class="perfil-foto">
+              <img src="img/teamsprite_01.png" alt="Carousel Img" >
+            </div>
+            <div class="perfil-conteudo">
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+          </article>
+
+          <article class="perfil-article">               
+
+            <img src="img/c02.jpg" alt="Carousel Img" class="perfil-img">
+            
+            <div class="perfil-foto">
+              <img src="img/teamsprite_02.png" alt="Carousel Img" >
+            </div>
+            <div class="perfil-conteudo">
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+
+          </article>
+          <article class="perfil-article">               
+            <img src="img/c03.jpg" alt="Carousel Img" class="perfil-img">
+            <div class="perfil-foto">
+              <img src="img/teamsprite_03.png" alt="Carousel Img" >
+            </div>
+            <div class="perfil-conteudo">
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+          </article>            
+          <article class="perfil-article">               
+
+            <img src="img/c04.jpg" alt="Carousel Img" class="perfil-img">
+          
+            <div class="perfil-foto">
+              <img src="img/teamsprite_04.png" alt="Carousel Img" >
+            </div>
+            <div class="perfil-conteudo">
+              <h2>Lorem ipsum dolor sit amet consectetur</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</p>
+            </div>
+          </article>
+
+        </section>
+        </div>  
+      
+        <section class="content">
+           <div class="container">
+          <article class="conteudo-principal">
+            <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>            
+            <a href="#" class="btn btn__primario">button</a>
+            <a href="#" class="btn btn__secundario">button</a>
+          </article>
+
+          <article class="conteudo-principal">
+            <h3>Lorem ipsum dolor sit amet consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed.</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa. Nullam condimentum mauris et rhoncus sagittis. Sed eu metus in diam tincidunt egestas non at odio.</p>
+            <p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean vitae lectus erat. Duis consequat laoreet velit. Mauris convallis, sapien sit amet scelerisque accumsan, felis urna aliquet nunc, viverra mollis odio tellus a nisl. Nulla lobortis lectus non rutrum viverra. Sed et molestie libero. Sed ut ultrices dui.</p>
+          </article>  
+          </div>
+        </section>
+        
+        <section class="ultimos-articles">
+          <div class="ultimos-articles__titulo">
+            <div class="container">
+          <h2>Latest Articles</h2>
+            </div>
+          </div>
+
+          <div class="ultimos-articles__img">
+              <a href="#"><img src="img/articles/01.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/02.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/03.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/04.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/05.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/06.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/07.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/08.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/09.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/10.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/11.jpg" alt=""></a>
+              <a href="#"><img src="img/articles/12.jpg" alt=""></a>
+          </div>
+        
+        </section>
+
+        <div class="laptop-slider">            
+          <div class="slideshow">
+            <figure><img alt="" src="img/slider/slide-01.png" /></figure>
+            <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+            <figure><img alt="" src="img/slider/slide-01.png" /></figure>
+            <figure><img alt="" src="img/slider/slide-02.png" /></figure>
+            <span class="prev" style="display: none;"><i class="fas fa-angle-left fa-4x"></i></span>
+            <span class="next" style="display: none;"><i class="fas fa-angle-right fa-4x"></i></span>
+          </div>                    
+        </div>
+        
+        <section class="quote-container">
+
+          <div class="quote-slideshow">
+            <figure>
+              <h2>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. </h2>
+              <figcaption>
+                Nam mi enim, auctor non ultricies.
+              </figcaption>
+            </figure>
+            <figure>
+              <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mattis suscipit est, ut imperdiet tortor. Proin sed molestie massa.</h2>
+              <figcaption>
+                Nam mi enim, auctor.
+              </figcaption>
+            </figure>
+          </div>
+          
+          <span class="prev"><i class="fas fa-angle-left fa-2x" style="display:none;"></i></span>
+          <span class="next"><i class="fas fa-angle-right fa-2x" style="display:none;"></i></span>
+          
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+              <h2 class="footer__logo">Infusion</h2>
+            
+              <p>Nam mi enim, auctor non ultricies a, fringilla eu risus. Praesent vitae lorem et elit tincidunt accumsan suscipit eu libero. Maecenas diam est, venenatis vitae dui in, vestibulum mollis arcu. Donec eu nibh tincidunt, dapibus sem eu, aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+
+              <p>aliquam dolor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum consectetur commodo eros, vitae laoreet lectus aliq</p>
+
+              <ul class="footer__links">
+                <li><a href="#">List One</a></li>
+                <li><a href="#">Page Two</a></li>
+                <li><a href="#">Design</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact Me</a></li>
+              </ul>
+            </div>
+        </footer>
+        <script src="../ProjetoInfusion/JS/menu.js"></script>
+        <script src="../ProjetoInfusion/JS/main.js"></script>
+    </body>
+</html>
